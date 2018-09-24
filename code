@@ -27,8 +27,8 @@
 #include <stdio.h>
 
 
-/* returns a value the user inputs */
-double get_value(void)
+
+double get_value(void)   /* returns a value the user inputs */
 {
  double value;
  
@@ -40,10 +40,47 @@ double get_value(void)
 
 
 
+void print_addition (double x, double y)   /* addition case */
+{
+ double result;   /* the sum of the two values */
+ result = x + y;
+ printf ("\n%lf + %lf = %lf\n", x, y, result);
+}
+
+
+
+void print_subtraction (double x, double y)   /* subtraction case */
+{
+ double result1;   /* the difference of x minus y */
+ double result2;   /* the difference of y minus x */
+ 
+ result1 = x - y;
+ result2 = y - x;
+ 
+ printf ("\n%lf - %lf = %lf\n", x, y, result1);
+ printf ("%lf - %lf = %lf\n", y, x, result2);
+}
+
+
+
+void print_multiplication (double one, double two)   /* multiplication case */
+{
+	
+}
+
+
+
+void print_division (double one, double two)   /* division case */
+{
+	
+}
+
+
+
 void main (void)
 {
- double first, second;  /* the two values the user inserts */
- int selection;
+ double first, second;   /* the two values the user inserts */
+ int selection;   /* number user types then enters to select an operation from the menu */
  
  printf ("This program asks for two digits and gives the user four operations to choose from.\n"
  		 "The operations include: Addition, Subtraction, Multiplication, or Division.\n\n"); 
@@ -88,15 +125,15 @@ void main (void)
  
  printf ("Please type in 1, 2, 3, 4, or 5 then press enter:  ");
  scanf ("%i", &selection);
+ printf ("You entered %i.\n", selection);
  
  switch (selection)
 {
  case 1:
- 		printf ("\n%lf + %lf = test\n", first, second);
+ 		print_addition (first, second);
  		break;
  case 2:
- 		printf ("\n%lf - %lf = test\n", first, second);
- 		printf ("%lf - %lf = test\n", second, first);
+ 		print_subtraction (first, second);
  		break;
  case 3:
  		printf ("\n%lf * %lf = test\n", first, second);
