@@ -1,1 +1,40 @@
+/* C Program by Breanne Ludovice for CS1310 September 13, 2018 
+ * print all of a right triangle
+ */
+#include <stdio.h>
+#include <math.h>  /* asin for arcsin */
+
+
+double get_leg (void)  /* return a length */
+{
+ double leg;  /* length input */
+ 
+ printf ("What is the length of one leg?  ");
+ scanf ("%lf", &leg);
+ printf ("You gave %lf for a leg length. \n\n\n", leg);	
+ return leg;
+}
+
+
+
+void main (void)
+{
+ double a, b, c, A, B, C = 90; /* 3 side lengths and 3 angle measures */
+ 
+ printf ("Give two leg lengths of a right triangle to get the rest.\n");
+ a = get_leg();
+ b = get_leg();
+
+ c = sqrt(a*a + b*b);
+ A = (180/3.14) * asin (a / c);
+ B = (180/3.14) * asin (b / c);
+ 
+ printf ("The triangle has side %lf, %lf, %lf and angles %lf, %lf, 90 degrees.\n",
+          a, b, c, A, B);
+}
+
+
+
+
+
 
