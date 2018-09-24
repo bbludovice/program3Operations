@@ -63,9 +63,11 @@ void print_subtraction (double x, double y)   /* subtraction case */
 
 
 
-void print_multiplication (double one, double two)   /* multiplication case */
+void print_multiplication (double x, double y)   /* multiplication case */
 {
-	
+ double result;   /* the product of the two values */
+ result = x * y;
+ printf ("\n%lf * %lf = %lf\n", x, y, result);
 }
 
 
@@ -112,12 +114,12 @@ void main (void)
  printf(
  " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
  " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
- " ::                                                                :: \n"
- " ::  1. Addition                                                   :: \n"
- " ::  2. Subtraction                                                :: \n"
- " ::  3. Multiplication                                             :: \n"
- " ::  4. Division                                                   :: \n"
- " ::  5. Exit Cafe                                                  :: \n"
+ " ::                                              ;,'          :: \n"
+ " ::  1. Addition                         _o_    ;:;'          :: \n"
+ " ::  2. Subtraction                  ,-.'---`.__ ;            :: \n"
+ " ::  3. Multiplication              ((j`=====',-'             :: \n"
+ " ::  4. Division                     `-\\     /                :: \n"
+ " ::  5. Exit Cafe                       `-=-'                 :: \n"
  " ::                                                                :: \n"
  " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
  " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n\n"
@@ -125,22 +127,26 @@ void main (void)
  
  printf ("Please type in 1, 2, 3, 4, or 5 then press enter:  ");
  scanf ("%i", &selection);
- printf ("You entered %i.\n", selection);
+ printf ("You entered %i.\n\n", selection);
  
+ /* *** note to self: add math puns later *** */
  switch (selection)
 {
  case 1:
+ 		printf ("Excellent choice! You will definitely be add-icted!\n");
  		print_addition (first, second);
  		break;
  case 2:
+ 		printf ("(Subtraction)\n");
  		print_subtraction (first, second);
  		break;
  case 3:
- 		printf ("\n%lf * %lf = test\n", first, second);
+ 		printf ("(Multiplication)\n");
+ 		print_multiplication (first, second);
  		break;
  case 4:
- 		printf ("\n%lf / %lf = test\n", first, second);
- 		printf ("%lf / %lf = test\n", second, first);
+ 		printf ("(Division)\n");
+ 		print_division (first, second);
  		break;
  case 5:
  		printf ("\nLeaving so soon? Please come again!\n");
