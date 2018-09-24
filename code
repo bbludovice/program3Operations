@@ -26,11 +26,17 @@
 */
 #include <stdio.h>
 
-
+double get_value(void)
+{
+	
+}
 
 
 
 void main (void)
 {
- 	
+ double first, second;  
+ 
+ printf ("This program asks for two digits and gives the user four operations to choose from.\n"
+ 		 "The operations include: Addition, Subtraction, Multiplication, or Division.\n"); 
 }
