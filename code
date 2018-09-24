@@ -43,12 +43,15 @@ double get_value(void)
 void main (void)
 {
  double first, second;  /* the two values the user inserts */
+ int selection;
  
  printf ("This program asks for two digits and gives the user four operations to choose from.\n"
  		 "The operations include: Addition, Subtraction, Multiplication, or Division.\n\n"); 
  		 
  first = get_value();
  second = get_value();
+ 
+ printf ("The two numbers you entered are %lf and %lf.\n", first, second);
  
  printf(
  "                                                               .----. \n"
@@ -79,9 +82,33 @@ void main (void)
  " ::  4. Division                                                   :: \n"
  " ::  5. Exit Cafe                                                  :: \n"
  " ::                                                                :: \n"
- " ::               Press 1, 2, 3, 4, or 5 to select.                :: \n"
- " ::                                                                :: \n"
  " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
- " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
+ " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n\n"
  );
+ 
+ printf ("Please type in 1, 2, 3, 4, or 5 then press enter:  ");
+ scanf ("%i", &selection);
+ 
+ switch (selection)
+{
+ case 1:
+ 		printf ("\n%lf + %lf = test\n", first, second);
+ 		break;
+ case 2:
+ 		printf ("\n%lf - %lf = test\n", first, second);
+ 		printf ("%lf - %lf = test\n", second, first);
+ 		break;
+ case 3:
+ 		printf ("\n%lf * %lf = test\n", first, second);
+ 		break;
+ case 4:
+ 		printf ("\n%lf / %lf = test\n", first, second);
+ 		printf ("%lf / %lf = test\n", second, first);
+ 		break;
+ case 5:
+ 		printf ("\nLeaving so soon? Please come again!\n");
+ 		break;
+ default:
+ 		printf ("\nInvalid selection.\n");
+}
 }
