@@ -159,28 +159,28 @@ void main (void)
  
  /* *** note to self: add math puns later *** */
  switch (selection)
-{
- case 1:
- 		printf ("Excellent choice! You will definitely be add-icted!\n");
- 		print_addition (first, second);
- 		break;
- case 2:
- 		printf ("(Subtraction)\n");
- 		print_subtraction (first, second);
- 		break;
- case 3:
- 		printf ("(Multiplication)\n");
- 		print_multiplication (first, second);
- 		break;
- case 4:
- 		printf ("(Division)\n");
- 		print_division1 (first, second);
- 		print_division2 (first, second);
- 		break;
- case 5:
- 		printf ("\nLeaving so soon? Please come again!\n");
- 		break;
- default:
- 		printf ("\nInvalid selection.\n");
-}
+ {
+  case 1:
+  		 printf ("Excellent choice! You will definitely be 'add'-icted!\n");
+ 		 print_addition (first, second);
+ 		 break;
+  case 2:
+ 		 printf ("(Subtraction)\n");
+ 		 print_subtraction (first, second);
+ 		 break;
+  case 3:
+ 		 printf ("(Multiplication)\n");
+ 		 print_multiplication (first, second);
+ 		 break;
+  case 4:
+ 		 printf ("Splendid decision! I recommend 'dividing' this treat among friends! \n");
+ 		 print_division1 (first, second);
+ 		 print_division2 (first, second);
+ 		 break;
+  case 5:
+ 		 printf ("\nLeaving so soon? Please come again!\n");
+ 		 break;
+  default:
+ 		 printf ("\nInvalid selection.\n");
+ }
 }
