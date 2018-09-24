@@ -26,17 +26,62 @@
 */
 #include <stdio.h>
 
+
+/* returns a value the user inputs */
 double get_value(void)
 {
-	
+ double value;
+ 
+ printf ("Please type in a digit then press enter:  ");
+ scanf ("%lf", &value);
+ printf ("The digit you entered is %lf.\n\n", value);
+ return value;
 }
 
 
 
 void main (void)
 {
- double first, second;  
+ double first, second;  /* the two values the user inserts */
  
  printf ("This program asks for two digits and gives the user four operations to choose from.\n"
- 		 "The operations include: Addition, Subtraction, Multiplication, or Division.\n"); 
+ 		 "The operations include: Addition, Subtraction, Multiplication, or Division.\n\n"); 
+ 		 
+ first = get_value();
+ second = get_value();
+ 
+ printf(
+ "                                                               .----. \n"
+ "                                                              /  .   \\ \n"
+ "                                                             |\\_/|    | \n"
+ "                                                             |   |   /| \n"
+ "   .----------------------------------------------------------------' | \n"
+ "  /  .-.                                                              | \n"
+ " |  /   \\             Welcome to the Operations Cafe!                 | \n"
+ " | |\\_.  |                                                            | \n"
+ " |\\|  | /| Please browse our fine selection of choice operations that | \n"
+ " | `---' |   will definitely satisy what you are currently craving!   | \n"
+ " |       |                                                            |  \n"
+ " |       |               Select from our menu below.                 / \n"
+ " |       |----------------------------------------------------------' \n"
+ " \\       | \n"
+ "  \\     / \n"
+ "   `---' \n"  
+ );
+ 
+ printf(
+ " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
+ " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
+ " ::                                                                :: \n"
+ " ::  1. Addition                                                   :: \n"
+ " ::  2. Subtraction                                                :: \n"
+ " ::  3. Multiplication                                             :: \n"
+ " ::  4. Division                                                   :: \n"
+ " ::  5. Exit Cafe                                                  :: \n"
+ " ::                                                                :: \n"
+ " ::               Press 1, 2, 3, 4, or 5 to select.                :: \n"
+ " ::                                                                :: \n"
+ " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
+ " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
+ );
 }
