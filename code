@@ -5,7 +5,7 @@
 |: |                                                             | :| 
 | :|                 C program by Breanne Ludovice               |: | 
 |: |                                                             | :|
-| :|                   CS1310 September 23, 2018                 |: |
+| :|                   CS1310 September 27, 2018                 |: |
 |: |                                                             | :| 
 | :|               Assignment: Program 3, Operations             |: | 
 |: |                                                             | :|
@@ -25,7 +25,6 @@
 +-------------------------------------------------------------------+
 */
 #include <stdio.h>
-
 
 
 double get_value(void)   /* returns a value the user inputs */
@@ -51,14 +50,11 @@ void print_addition (double x, double y)   /* addition case */
 
 void print_subtraction (double x, double y)   /* subtraction case */
 {
- double result1;   /* the difference of x - y */
- double result2;   /* the difference of y - x */
+ double result;   /* the difference of the two values */
  
- result1 = x - y;
- result2 = y - x;
+ result = x - y;
  
- printf ("\n%lf - %lf = %lf\n", x, y, result1);
- printf ("%lf - %lf = %lf\n", y, x, result2);
+ printf ("\n%lf - %lf = %lf\n", x, y, result);
 }
 
 
@@ -72,36 +68,19 @@ void print_multiplication (double x, double y)   /* multiplication case */
 
 
 
-void print_division1 (double x, double y)   /* 1st division case */
+void print_division (double x, double y)   /* 1st division case */
 {
- double result1;   /* the quotient of x / y */
+ double result;   /* the quotient of the two values */
  
- if (y > 0)
+ if (y != 0)
  {
-  result1 = x / y;
-  printf ("\n\n%lf / %lf = %lf\n", x, y, result1);
+  result = x / y;
+  printf ("\n\n%lf / %lf = %lf\n", x, y, result);
  }
  else
  {
   printf ("\nx/y could not be printed.\n");
-  printf ("Your second digit cannot be 0 or a negative number. Please come again with valid values!");
- }
-}
-
-
-
-void print_division2 (double x, double y)   /* 2nd division case */
-{
- double result2;   /* the quotient of y / x */
- 
- if (x > 0)
- { result2 = y / x;
-   printf ("\n\n%lf / %lf = %lf\n", y, x, result2);
- }
- else
- {
-  printf ("\ny/x could not be printed.\n");
-  printf ("Your first digit cannot be 0 or a negative number. Please come again with valid values!");	
+  printf ("Your second digit cannot be 0. Please come again with valid values!");
  }
 }
 
@@ -167,6 +146,7 @@ void main (void)
   case 2:
  		 printf ("(Subtraction)\n");
  		 print_subtraction (first, second);
+ 		 print_subtraction (second, first);
  		 break;
   case 3:
  		 printf ("(Multiplication)\n");
@@ -174,8 +154,8 @@ void main (void)
  		 break;
   case 4:
  		 printf ("Splendid decision! I recommend 'dividing' this treat among friends! \n");
- 		 print_division1 (first, second);
- 		 print_division2 (first, second);
+ 		 print_division (first, second);
+ 		 print_division (second, first);
  		 break;
   case 5:
  		 printf ("\nLeaving so soon? Please come again!\n");
