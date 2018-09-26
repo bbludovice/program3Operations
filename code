@@ -27,7 +27,7 @@
 #include <stdio.h>
 
 
-double get_value(void)   /* returns a value the user inputs */
+double get_value (void)   /* returns a value the user inputs */
 {
  double value;
  
@@ -131,36 +131,37 @@ void main (void)
  " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n"
  " :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: \n\n"
  );
- 
+ 	 
+
  printf ("Please type in 1, 2, 3, 4, or 5 then press enter:  ");
  scanf ("%i", &selection);
  printf ("You entered %i.\n\n", selection);
- 
- /* *** note to self: add math puns later *** */
+	 	 
  switch (selection)
  {
-  case 1:
+  case 1:   /* addition */
   		 printf ("Excellent choice! You will definitely be 'add'-icted!\n");
  		 print_addition (first, second);
  		 break;
-  case 2:
- 		 printf ("(Subtraction)\n");
+  case 2:   /* subtraction */
+ 		 printf ("Sublime selection! This one's on the house; I 'subtracted' it from your bill!\n");
  		 print_subtraction (first, second);
  		 print_subtraction (second, first);
  		 break;
-  case 3:
- 		 printf ("(Multiplication)\n");
+  case 3:   /* multiplication */
+ 		 printf ("Wonderful option! I find this operation 'multipying' my happiness!\n");
  		 print_multiplication (first, second);
  		 break;
-  case 4:
+  case 4:   /* division */
  		 printf ("Splendid decision! I recommend 'dividing' this treat among friends! \n");
  		 print_division (first, second);
  		 print_division (second, first);
  		 break;
-  case 5:
- 		 printf ("\nLeaving so soon? Please come again!\n");
- 		 break;
-  default:
- 		 printf ("\nInvalid selection.\n");
+  case 5:   /* Quit statement */
+		 printf ("\nLeaving so soon? Please come again!\n");
+	 	 break;
+  default:   /* default/invalid */
+	 	 printf ("\nInvalid selection.\n");
  }
+     
 }
