@@ -1,0 +1,77 @@
+=====
+DATA:
+=====
+double get_value
+double x, y
+
+==========
+ALGORITHM:
+==========
+--- main ---
+Print instructions:
+ "This program asks for two digits and gives the user four operations to choose from
+including, addition, subtraction, multiplication, or division."
+
+x = get_value();
+y = get_value();
+
+Print the menu of operations.
+Have user choose one operation.
+Switch on operation.
+
+Case 1: Addition
+ Print "x + y = ___"
+Case 2: Subtraction
+ Print "x - y = ___"
+ Print "y - x = ___"
+Case 3: Multiplication
+ Print "x * y = ___"
+Case 4: Division
+ if denominator != 0
+   Print "x / y = ___"
+   Print "y / x = ___"
+     else
+       Print "Denominator cannot equal 0. Please run again with a different value."
+Case 5: Quit
+ Print "Leaving so soon? Come again!"
+Default Case: Invalid selection
+
+--- get_value ---
+Print, "Please enter a number."
+Scan value
+Print, "You typed in ___."
+Return value
+
+=====
+MENU:
+=====
+                                                               .---.
+                                                              /  .  \
+                                                             |\_/|   |
+                                                             |   |  /|
+  .----------------------------------------------------------------' |
+ /  .-.                                                              |
+|  /   \             Welcome to the Operations Cafe!                 |
+| |\_.  |                                                            |
+|\|  | /| Please browse our fine selection of choice operations that |
+| `---' |   will definitely satisy what you are currently craving!   |
+|       |                                                            | 
+|       |               Select from our menu below.                 /
+|       |----------------------------------------------------------'
+\       |
+ \     /
+  `---'
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::                                                                ::
+:: 1. Addition                                                    ::
+:: 2. Subtraction                                                 ::
+:: 3. Multiplication                                              ::
+:: 4. Division                                                    ::
+:: 5. Exit Cafe                                                   ::
+::                                                                ::
+:: Press 1, 2, 3, 4, or 5 to select.                              ::
+::                                                                ::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
